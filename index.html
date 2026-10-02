@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deriv Options - High-Speed Options & Synthetic Trading</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Deriv<span>Options</span></a>
+      <ul class="nav-links">
+        <li><a href="#markets">Markets</a></li>
+        <li><a href="#options">Option Types</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#demo" class="btn btn-outline">Demo Account</a>
+        <a href="#trade" class="btn btn-primary">Launch App</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Live Market Ticker Ribbon -->
+  <div class="ticker-bar">
+    <div class="ticker-wrapper" id="tickerWrapper">
+      <div class="ticker-item"><span class="symbol">Vol 100 (1s) Index</span> <span class="price up">1,245.82 ▲</span></div>
+      <div class="ticker-item"><span class="symbol">Boom 1000 Index</span> <span class="price down">6,521.10 ▼</span></div>
+      <div class="ticker-item"><span class="symbol">EUR/USD</span> <span class="price up">1.0845 ▲</span></div>
+      <div class="ticker-item"><span class="symbol">Crash 500 Index</span> <span class="price up">4,112.30 ▲</span></div>
+      <div class="ticker-item"><span class="symbol">Gold (XAU/USD)</span> <span class="price down">2,380.15 ▼</span></div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="badge"><i class="fa-solid fa-shield-halved"></i> Official Deriv API Integration</div>
+        <h1>Trade Synthetic & Financial Markets with Precision</h1>
+        <p>Access high-speed execution engines, specialized option types, and customized analytical tools through a streamlined third-party interface.</p>
+        <div class="hero-cta">
+          <a href="#trade" class="btn btn-primary btn-lg">Start Trading Now</a>
+          <a href="#demo" class="btn btn-outline btn-lg">Try Free Demo</a>
+        </div>
+        <div class="hero-trust">
+          <span><i class="fa-solid fa-check"></i> 256-Bit SSL Security</span>
+          <span><i class="fa-solid fa-check"></i> OAuth2 Authentication</span>
+          <span><i class="fa-solid fa-check"></i> Sub-50ms Execution</span>
+        </div>
+      </div>
+      <div class="hero-preview">
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">Volatility 100 Index - Rise/Fall</span>
+          </div>
+          <div class="terminal-body">
+            <div class="chart-mockup">
+              <div class="chart-line"></div>
+              <div class="spot-price">$1,245.82</div>
+            </div>
+            <div class="trade-controls-mock">
+              <button class="trade-btn rise"><i class="fa-solid fa-arrow-trend-up"></i> Rise (88.4% Payout)</button>
+              <button class="trade-btn fall"><i class="fa-solid fa-arrow-trend-down"></i> Fall (88.4% Payout)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Key Value Proposition -->
+  <section class="features">
+    <div class="section-container">
+      <h2 class="section-title">Built for Performance Traders</h2>
+      <p class="section-subtitle">Engineered over Deriv’s infrastructure to deliver maximum clarity and control.</p>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Ultra-Fast Execution</h3>
+          <p>Low-latency API connectivity ensures single-click order entry on rapid tick contracts and volatility indices.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-sliders"></i></div>
+          <h3>Smart Risk Controls</h3>
+          <p>Configure automatic Take Profit, Stop Loss, and Deal Cancelation parameters directly inside your trade layout.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Custom Indicator Suite</h3>
+          <p>Layer technical indicators over standard Deriv continuous synthetic indices including Volatility 75 and Boom/Crash.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported Options & Markets -->
+  <section class="options-tabs-section" id="options">
+    <div class="section-container">
+      <h2 class="section-title">Flexible Option Contracts</h2>
+      <p class="section-subtitle">Select the contract structure that fits your trading system.</p>
+
+      <div class="tabs-header">
+        <button class="tab-btn active" data-tab="rise-fall">Rise / Fall</button>
+        <button class="tab-btn" data-tab="higher-lower">Higher / Lower</button>
+        <button class="tab-btn" data-tab="multipliers">Multipliers</button>
+      </div>
+
+      <div class="tab-content active" id="rise-fall">
+        <div class="tab-pane-content">
+          <h3>Rise / Fall Options</h3>
+          <p>Predict whether the market exit spot will end higher or lower than the entry spot at contract expiration.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Duration settings from 1 tick up to 24 hours</li>
+            <li><i class="fa-solid fa-check"></i> Fixed payout structure known prior to entry</li>
+            <li><i class="fa-solid fa-check"></i> Available on all 24/7 Synthetic Indices</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab-content" id="higher-lower">
+        <div class="tab-pane-content">
+          <h3>Higher / Lower Barriers</h3>
+          <p>Set price barriers above or below current market levels to adjust payout ratios according to market bias.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Customizable risk-to-reward ratios</li>
+            <li><i class="fa-solid fa-check"></i> Dynamic obstacle target lines</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab-content" id="multipliers">
+        <div class="tab-pane-content">
+          <h3>Multipliers</h3>
+          <p>Amplify potential upside returns while capping maximum loss strictly to your initial stake amount.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Leverage-like returns without margin call risk</li>
+            <li><i class="fa-solid fa-check"></i> Integrated Stop Loss and Take Profit functionality</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="onboarding" id="how-it-works">
+    <div class="section-container">
+      <h2 class="section-title">Get Started in 3 Steps</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h3>Connect Account</h3>
+          <p>Log in securely using OAuth2 authentication with your existing official Deriv trading credentials.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h3>Select Market</h3>
+          <p>Choose between 24/7 Synthetic Indices, Forex pairs, Commodities, or Cryptocurrencies.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h3>Execute & Track</h3>
+          <p>Place option contracts instantly and track live position metrics through your personal dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regulatory & Third-Party Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-disclaimer">
+        <h4><i class="fa-solid fa-triangle-exclamation"></i> Risk Warning & Third-Party Declaration</h4>
+        <p>Trading financial options and synthetic indices involves substantial risk of capital loss and may not be suitable for all investors. Prices of synthetic instruments are generated algorithmically and carry high volatility risk.</p>
+        <p><strong>Deriv Options</strong> is an independent third-party software application utilizing the official WebSockets/REST API provided by Deriv. Deriv Options is not directly owned, managed, or operated by Deriv Ltd or its global subsidiaries.</p>
+      </div>
+
+      <div class="footer-links-grid">
+        <div class="footer-column">
+          <h5>Deriv Options</h5>
+          <p>A high-performance trading client tailored for active option traders globally.</p>
+        </div>
+        <div class="footer-column">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#markets">Markets</a></li>
+            <li><a href="#options">Option Types</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Legal & API</h5>
+          <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">API Security Notes</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Deriv Options. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
